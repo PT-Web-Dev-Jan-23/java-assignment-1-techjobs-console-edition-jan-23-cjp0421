@@ -97,10 +97,12 @@ public class JobData {
 
         // load data, if not already loaded
         loadData();
-
+        ArrayList<HashMap<String, String>> bullshit = new ArrayList<>();
+        return bullshit;
         // TODO - implement this method
-        return null;
     }
+
+
 
     /**
      * Read in data from a CSV file and store it in a list
