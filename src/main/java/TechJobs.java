@@ -122,6 +122,11 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+
+        if(someJobs.isEmpty()){
+            System.out.println("No Results");
+        }
+
         for(int i=0;i< someJobs.size(); i++){
 //            System.out.println("The value of i is "+i);
 
@@ -135,6 +140,7 @@ public class TechJobs {
                         "core competency: "+job.get("core competency")+"\n"+
                         "*****" +
                         "\n");
+
             }
         }
 
