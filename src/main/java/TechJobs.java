@@ -132,14 +132,14 @@ public class TechJobs {
 
             for(HashMap<String, String> job : someJobs){
 
-                System.out.print("\n*****\n" +
-                        "position type: "+job.get("position type")+"\n"+
-                        "name: "+job.get("name")+"\n"+
-                        "employer: "+job.get("employer")+"\n"+
-                        "location: "+job.get("location")+"\n"+
-                        "core competency: "+job.get("core competency")+"\n"+
-                        "*****" +
-                        "\n");
+                    System.out.print("\n*****\n" +
+                            "position type: " + job.get("position type") + "\n" +
+                            "name: " + job.get("name") + "\n" +
+                            "employer: " + job.get("employer") + "\n" +
+                            "location: " + job.get("location") + "\n" +
+                            "core competency: " + job.get("core competency") + "\n" +
+                            "*****" +
+                            "\n");
 
             }
         }
