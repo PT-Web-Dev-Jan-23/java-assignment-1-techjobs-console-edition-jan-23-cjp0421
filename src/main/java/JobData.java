@@ -99,15 +99,19 @@ public class JobData {
         // load data, if not already loaded
         loadData();
         //below is the empty results
-        ArrayList<HashMap<String, String>> results = new ArrayList<>();
+        ArrayList<HashMap<String, String>> results = new ArrayList<HashMap<String, String>>();
 
         //for loop that checks each job if they .contain the value
         //go through arraylist with all the jobs (each job is a  hashmap) and the second loop goes through the hashmap strings and values
         for (HashMap<String, String> job : allJobs) {
-            if(job.containsValue(value)){
-                       results.add(job);
-                }
+        for(String current : job.values()) {
+            if (current.contains(value)) {
+
+                results.add(job);
+                    }
+
             }
+        }
 
         return results;
     }
