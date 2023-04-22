@@ -73,13 +73,13 @@ public class JobData {
 
         // load data, if not already loaded
         loadData();
-
+        value = value.toUpperCase();
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
 
             String aValue = row.get(column);
-
+            aValue = aValue.toUpperCase();
             if (aValue.contains(value)) {
                 jobs.add(row);
             }
@@ -95,7 +95,7 @@ public class JobData {
      * @return List of all jobs with at least one field containing the value
      */
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
-
+        value = value.toUpperCase();
         // load data, if not already loaded
         loadData();
         //below is the empty results
@@ -105,8 +105,9 @@ public class JobData {
         //go through arraylist with all the jobs (each job is a  hashmap) and the second loop goes through the hashmap strings and values
         for (HashMap<String, String> job : allJobs) {
         for(String current : job.values()) {
+            current = current.toUpperCase();
             if (current.contains(value)) {
-                
+
                     results.add(job);
 
                     }
