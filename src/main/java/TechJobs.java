@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+
 /**
  * Created by LaunchCode
  */
@@ -117,9 +118,35 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
+
+
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        if(someJobs.isEmpty()){
+            System.out.print("No Results");
+        }
+
+        //for(int i=0;i< someJobs.size(); i++){
+//            System.out.println("The value of i is "+i);
+
+            for(HashMap<String, String> job : someJobs){
+
+                    System.out.print("\n*****\n" +
+                            "position type: " + job.get("position type") + "\n" +
+                            "name: " + job.get("name") + "\n" +
+                            "employer: " + job.get("employer") + "\n" +
+                            "location: " + job.get("location") + "\n" +
+                            "core competency: " + job.get("core competency") + "\n" +
+                            "*****" +
+                            "\n");
+
+            }
+        //}
+
+
+
+//        System.out.println("No Results");
+
     }
 }
